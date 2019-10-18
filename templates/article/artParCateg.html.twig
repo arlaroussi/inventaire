@@ -1,0 +1,21 @@
+{%  extends "base.html.twig" %}
+
+{% block title %}Index{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+<table class="table"> 
+{% for val in result %} 
+    <tr>
+        <td>{{ val.designation }}</td>
+        <td>{{ val.qte }}</td>
+        <td>{{ val.getPrixUnit }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock %}

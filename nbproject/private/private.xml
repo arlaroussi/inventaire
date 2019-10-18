@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/inventaire/config/packages/routing.yaml</file>
+            <file>file:/var/www/html/inventaire/templates/user/index.html.twig</file>
+            <file>file:/var/www/html/inventaire/templates/article/index.html.twig</file>
+            <file>file:/var/www/html/inventaire/templates/article/test1.html.twig</file>
+            <file>file:/var/www/html/inventaire/src/Entity/Article.php</file>
+            <file>file:/var/www/html/inventaire/src/Entity/User.php</file>
+            <file>file:/var/www/html/inventaire/src/Controller/UserController.php</file>
+            <file>file:/var/www/html/inventaire/templates/user/login.html.twig</file>
+            <file>file:/var/www/html/inventaire/config/packages/security.yaml</file>
+            <file>file:/var/www/html/inventaire/src/Repository/UserRepository.php</file>
+            <file>file:/var/www/html/inventaire/templates/categorie/add.html.twig</file>
+            <file>file:/var/www/html/inventaire/templates/article/testRepo.html.twig</file>
+            <file>file:/var/www/html/inventaire/src/Form/CategorieType.php</file>
+            <file>file:/var/www/html/inventaire/src/Repository/ArticleRepository.php</file>
+            <file>file:/var/www/html/inventaire/config/packages/dev/routing.yaml</file>
+            <file>file:/var/www/html/inventaire/src/Form/ArticleType.php</file>
+            <file>file:/var/www/html/inventaire/config/services.yaml</file>
+            <file>file:/var/www/html/inventaire/config/routes.yaml</file>
+            <file>file:/var/www/html/inventaire/src/Controller/CategorieController.php</file>
+            <file>file:/var/www/html/inventaire/src/DataFixtures/UserFixtures.php</file>
+            <file>file:/var/www/html/inventaire/templates/base.html.twig</file>
+            <file>file:/var/www/html/inventaire/templates/article/update.html.twig</file>
+            <file>file:/var/www/html/inventaire/templates/article/add.html.twig</file>
+            <file>file:/var/www/html/inventaire/src/Controller/TestController.php</file>
+            <file>file:/var/www/html/inventaire/templates/article/artParCateg.html.twig</file>
+            <file>file:/var/www/html/inventaire/templates/article/register.html.twig</file>
+            <file>file:/var/www/html/inventaire/src/Controller/ArticleController.php</file>
+        </group>
+    </open-files>
+</project-private>
