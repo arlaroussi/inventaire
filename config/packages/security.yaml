@@ -1,7 +1,7 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        from_database:
+        in_database:
             entity:
                 class: App\Entity\User
                 property: username
@@ -11,7 +11,7 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main: 
-            anonymous: true
+            anonymous: ~
             logout:
                 path: /logout
                 target: /
@@ -23,9 +23,11 @@ security:
             #switch_user: trues://symfony.com/doc/current/security/impersonating_user.html
             #switch_user: true
             #http_basic: true
-            form_login: 
+            #form_login: 
+            #    check_path: login
+            form_login:
+                login_path: login
                 check_path: login
-
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     #access_control:
@@ -34,5 +36,8 @@ security:
 
     encoders:
         App\Entity\User:
-            algorithm: bcrypt
-            cost: 12
+            algorithm: auto
+            
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]

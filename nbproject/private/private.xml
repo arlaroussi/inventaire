@@ -10,24 +10,36 @@
             <file>file:/var/www/html/inventaire/src/Entity/Article.php</file>
             <file>file:/var/www/html/inventaire/src/Entity/User.php</file>
             <file>file:/var/www/html/inventaire/src/Controller/UserController.php</file>
-            <file>file:/var/www/html/inventaire/templates/user/login.html.twig</file>
             <file>file:/var/www/html/inventaire/config/packages/security.yaml</file>
+            <file>file:/var/www/html/inventaire/config/routes/annotations.yaml</file>
+            <file>file:/var/www/html/inventaire/templates/user/register.html.twig</file>
             <file>file:/var/www/html/inventaire/src/Repository/UserRepository.php</file>
+            <file>file:/var/www/html/inventaire/templates/user/login1.html.twig</file>
             <file>file:/var/www/html/inventaire/templates/categorie/add.html.twig</file>
+            <file>file:/var/www/html/inventaire/src/Form/UserType.php</file>
             <file>file:/var/www/html/inventaire/templates/article/testRepo.html.twig</file>
             <file>file:/var/www/html/inventaire/src/Form/CategorieType.php</file>
+            <file>file:/var/www/html/inventaire/templates/user/dashboard.html.twig</file>
+            <file>file:/var/www/html/inventaire/config/bootstrap.php</file>
             <file>file:/var/www/html/inventaire/src/Repository/ArticleRepository.php</file>
+            <file>file:/var/www/html/inventaire/templates/article/test2.html.twig</file>
+            <file>file:/var/www/html/inventaire/config/packages/twig.yaml</file>
             <file>file:/var/www/html/inventaire/config/packages/dev/routing.yaml</file>
             <file>file:/var/www/html/inventaire/src/Form/ArticleType.php</file>
+            <file>file:/var/www/html/inventaire/src/Form/TestType.php</file>
             <file>file:/var/www/html/inventaire/config/services.yaml</file>
+            <file>file:/var/www/html/inventaire/config/packages/doctrine.yaml</file>
             <file>file:/var/www/html/inventaire/config/routes.yaml</file>
             <file>file:/var/www/html/inventaire/src/Controller/CategorieController.php</file>
             <file>file:/var/www/html/inventaire/src/DataFixtures/UserFixtures.php</file>
             <file>file:/var/www/html/inventaire/templates/base.html.twig</file>
             <file>file:/var/www/html/inventaire/templates/article/update.html.twig</file>
             <file>file:/var/www/html/inventaire/templates/article/add.html.twig</file>
+            <file>file:/var/www/html/inventaire/src/Service/MessageGenerator.php</file>
             <file>file:/var/www/html/inventaire/src/Controller/TestController.php</file>
+            <file>file:/var/www/html/inventaire/src/Entity/Categorie.php</file>
             <file>file:/var/www/html/inventaire/templates/article/artParCateg.html.twig</file>
+            <file>file:/var/www/html/inventaire/config/packages/dev/swiftmailer.yaml</file>
             <file>file:/var/www/html/inventaire/templates/article/register.html.twig</file>
             <file>file:/var/www/html/inventaire/src/Controller/ArticleController.php</file>
         </group>

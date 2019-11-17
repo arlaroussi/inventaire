@@ -60,24 +60,24 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
         ";
         // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 13
+        // line 14
         echo "
         ";
-        // line 14
-        $this->displayBlock('icnon', $context, $blocks);
         // line 15
+        $this->displayBlock('icnon', $context, $blocks);
+        // line 16
         echo "    </head>
     <body>
     ";
-        // line 17
+        // line 18
         $this->displayBlock('menu', $context, $blocks);
-        // line 25
-        echo "    ";
-        $this->displayBlock('body', $context, $blocks);
         // line 26
         echo "    ";
-        $this->displayBlock('javascripts', $context, $blocks);
+        $this->displayBlock('body', $context, $blocks);
         // line 27
+        echo "    ";
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 28
         echo "    </body>
 </html>";
         
@@ -151,6 +151,10 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
         // line 11
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/gsb.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
+            <!-- link href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" /-->
          ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -160,7 +164,7 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
 
     }
 
-    // line 14
+    // line 15
     public function block_icnon($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -181,7 +185,7 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
 
     }
 
-    // line 17
+    // line 18
     public function block_menu($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -191,11 +195,11 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "menu"));
 
-        // line 18
+        // line 19
         echo "        <center>
             <a class=\"navbar-brand\" href=\"/\">
                 <img src=\"";
-        // line 20
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo1.gif"), "html", null, true);
         echo "\" width=\"300\" >
             </a>
@@ -210,7 +214,7 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
 
     }
 
-    // line 25
+    // line 26
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -228,7 +232,7 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
 
     }
 
-    // line 26
+    // line 27
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -253,7 +257,7 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
 
     public function getDebugInfo()
     {
-        return array (  232 => 26,  214 => 25,  199 => 20,  195 => 18,  185 => 17,  164 => 14,  152 => 11,  148 => 10,  144 => 9,  139 => 8,  129 => 7,  110 => 6,  92 => 1,  81 => 27,  78 => 26,  75 => 25,  73 => 17,  69 => 15,  67 => 14,  64 => 13,  62 => 7,  58 => 6,  52 => 2,  50 => 1,);
+        return array (  236 => 27,  218 => 26,  203 => 21,  199 => 19,  189 => 18,  168 => 15,  156 => 12,  152 => 11,  148 => 10,  144 => 9,  139 => 8,  129 => 7,  110 => 6,  92 => 1,  81 => 28,  78 => 27,  75 => 26,  73 => 18,  69 => 16,  67 => 15,  64 => 14,  62 => 7,  58 => 6,  52 => 2,  50 => 1,);
     }
 
     public function getSourceContext()
@@ -269,6 +273,7 @@ class __TwigTemplate_f78296135b981c5356afd1095b764c7d3d0c10a9a21fc7ab2e897068b8c
             <link href=\"{{ asset('css/bootstrap-grid.css') }}\" rel=\"stylesheet\" />
             <link href=\"{{ asset('css/bootstrap-reboot.css') }}\" rel=\"stylesheet\" />
             <link href=\"{{ asset('css/gsb.css') }}\" rel=\"stylesheet\" />
+            <!-- link href=\"{{ asset('css/style.css') }}\" rel=\"stylesheet\" /-->
          {% endblock %}
 
         {% block icnon %}<link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('img/gsb.gif') }}\" />{% endblock %}

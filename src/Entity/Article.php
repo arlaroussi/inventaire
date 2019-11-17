@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
  */
@@ -23,16 +25,24 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=55)
+     * @Assert\Length(min=5)
      */
     private $designation;
 
     /**
      * @ORM\Column(type="integer")
+     * 
      */
     private $qte;
 
     /**
      * @ORM\Column(type="decimal", precision=7, scale=2)
+     * @Assert\Range(
+     *      min = 50,
+     *      max = 75,
+     *      minMessage = "Entrer une valeur supérieure à {{ limit }}",
+     *      maxMessage = "Entrer une valeur inférieure à  {{ limit }}"
+     * )
      */
     private $prix_unit;
 

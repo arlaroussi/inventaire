@@ -28,7 +28,7 @@ class ArticleController extends AbstractController
         return $this->render('article/test1.html.twig');
     }
     
-    /*
+    /**
      * @Route("/add_article", name="add_art")
      */
    public function creerArticle(Request $query) {

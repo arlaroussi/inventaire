@@ -32,36 +32,59 @@ class User implements UserInterface, \Serializable
     {
         return $this->id;
     }
+    
+    public function __construct()
+    {
+        $this->isActive = true;
+        // may not be needed, see section on salt below
+        // $this->salt = md5(uniqid('', true));
+    }
 
     public function getUsername(): ?string
     {
         return $this->username;
     }
 
-    public function setUsername(string $username): self
+    public function setUsername(string $username)
     {
         $this->username = $username;
 
         return $this;
     }
 
-    public function getPassword(): ?string
+    public function getPassword()
     {
         return $this->password;
     }
 
-    public function setPassword(string $password): self
+    public function setPassword(string $password)
     {
         $this->password = $password;
 
         return $this;
     }
 
+        public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
+
+    
     public function getRoles() {
         return ['ROLE_ADMIN'];        
     }
     
-    public function eraseCredentials() {       
+    public function setRoles(array $roles): void
+    {
+        $this->roles = $roles;
+    }
+    public function eraseCredentials() {   
+        return null;
     }
     
     public function getSalt() {
@@ -69,7 +92,7 @@ class User implements UserInterface, \Serializable
     }
     
     public function serialize() {
-        return serialize($this->id, $this->username, $this->password);
+        return serialize([$this->id, $this->username, $this->password]);
     }
 
     public function unserialize($serialized) {

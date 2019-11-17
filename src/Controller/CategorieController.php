@@ -7,6 +7,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+use Psr\Log\LoggerInterface;
+
 use App\Entity\Categorie;
 use App\Form\CategorieType;
 
@@ -23,7 +25,7 @@ class CategorieController extends AbstractController
     }
     
    /**
-     * @Route("/add_categorie", name="add_categ")
+     * @Route("/categorie/add_categorie", name="add_categ")
      */
     
     public function creerCategorie(Request $query) {
@@ -57,5 +59,15 @@ class CategorieController extends AbstractController
     }
         return $this->render('categorie/add.html.twig',array('form'=>$form->createView()));     
      }
+     
+/**
+ * @Route("/products")
+ */
+public function list(LoggerInterface $logger)
+{
+    $logger->info('Look! I just used a service');
+
+    // ...
+}
 }
 

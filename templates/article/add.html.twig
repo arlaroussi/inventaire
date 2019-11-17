@@ -1,33 +1,25 @@
 {% extends "base.html.twig" %}
 {% block title %}
-    Formulaire de connexion
+    Formulaire Ajout Article
 {% endblock %}
 
 {% block body %}
+    
+<h4><center>Formulaire article</center></h4 >
 <center>
 <div class="container">
-
-  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
-
-    {# Les erreurs générales du formulaire. #}
-    {{ form_errors(form) }}
-
-    <h3><center>Formulaire ajout de mission</center></h3>
-
 <div class="well">
-
+<div class="bg-light">
   {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
 
-    {# Les erreurs générales du formulaire. #}
-    {{ form_errors(form) }}
+  {# Les erreurs générales du formulaire. #}
+  {{ form_errors(form) }}
 
     <div class="form-group">
       {# Génération du label. #}
       {{ form_label(form.code, "Code article", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-      
       {# Affichage des erreurs pour ce champ précis. #}
       {{ form_errors(form.code) }}
-
       <div class="col-sm-4">
         {# Génération de l'input. #}
         {{ form_widget(form.code, {'attr': {'class': 'form-control'}}) }}
@@ -61,7 +53,6 @@
     </div>
    
     <div class="form-group">
-
       {{ form_label(form.categorie, "Catégorie", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
       {{ form_errors(form.categorie) }}
       <div class="col-sm-4">
@@ -69,21 +60,18 @@
       </div>
     </div>
 
-  {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
-<div class="row">
-  
-    <div class="container">
-        <label class="col-md-4 control-label"></label>
-            <div class="col-md-4">
-                {{ form_widget(form.valider, {'attr': {'class': 'btn btn-success'}}) }}
-                 {{ form_widget(form.annuler, {'attr': {'class': 'btn btn-success'}}) }}
-            </div>
-    </div>
-
-</div>
     
- </div>
-   
+        <div class="row">
+        <label class="col-md-4 control-label"></label>
+             <div class="col-sm-4 col-md-offset-2">
+                {{ form_widget(form.valider, {'attr': {'class': 'col-md-4 btn btn-primary'}}) }}
+                {{ form_widget(form.annuler, {'attr': {'class': 'col-md-4 btn btn-primary'}}) }}
+            </div>
+        </div> <br>
+</div>
+</div>
+</div>
+</center>
 {% if app.session.flashBag.has('success') %}
  <div class="alert alert-success">
   {% for msg in app.session.flashBag.get('success') %}
@@ -92,21 +80,12 @@
  </div>
 {% endif %}
 
+{{ form_rest(form) }}
 
-            
-  {{ form_rest(form) }}
-
+{# Fermeture de la balise <form> du formulaire HTML #}
+{{ form_end(form) }}
   
-
-  {# Fermeture de la balise <form> du formulaire HTML #}
-
-  {{ form_end(form) }}
-  
-<a href="/add_article" class="btn btn-outline-light">AJOUTER NOUVEL<br/>ARTICLE</a><br/>
-
-</center>
-
-</div>{# empty Twig template #}
+<!-- <a href="/add_article" class="btn btn-outline-light">AJOUTER NOUVEL<br/>ARTICLE</a><br/> -->
 
 
 {% endblock %}
